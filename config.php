@@ -38,7 +38,8 @@ var $vrdeaddress = '0.0.0.0';
 var $servers = array(
         array(
                 'name' => 'Jenkins-Replica-1',
-                'location' => 'http://192.168.4.61:18083/'
+                'location' => 'http://192.168.4.61:18083/',
+				'authMaster' => true // Use this server for authentication
         ),
         array(
                 'name' => 'Jenkins-Replica-2',
