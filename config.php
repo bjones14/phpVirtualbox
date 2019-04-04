@@ -13,7 +13,7 @@ var $username = 'vbox';
 var $password = 'pass';
 
 /* SOAP URL of vboxwebsrv (not phpVirtualBox's URL) */
-var $location = 'http://127.0.0.1:18083/';
+var $location = 'http://192.168.4.61:18083/';
 
 /* Default language. See languages folder for more language options.
  * Can also be changed in File -> Preferences -> Language in
@@ -35,26 +35,19 @@ var $vrdeaddress = '0.0.0.0';
 // Multiple servers example config. Uncomment (remove /* and */) to use.
 // Add ALL the servers you want to use. Even if you have the server set
 // above. The default server will be the first one in the list.
-/*
 var $servers = array(
         array(
-                'name' => 'London',
-                'username' => 'user',
-                'password' => 'pass',
-                'location' => 'http://192.168.1.1:18083/',
-                'authMaster' => true // Use this server for authentication
+                'name' => 'Jenkins-Replica-1',
+                'location' => 'http://192.168.4.61:18083/'
         ),
         array(
-                'name' => 'New York',
-                'username' => 'user2',
-                'password' => 'pass2',
-                'location' => 'http://192.168.1.2:18083/'
+                'name' => 'Jenkins-Replica-2',
+                'location' => 'http://192.168.4.86:18083/'
         ),
 );
-*/
 
 // Disable authentication
-#var $noAuth = true;
+var $noAuth = true;
 
 // Host / ip to use for console connections
 #var $consoleHost = '192.168.1.40';
@@ -63,10 +56,10 @@ var $servers = array(
 #var $noPreview = true;
 
 // Default preview box update interval in seconds
-#var $previewUpdateInterval = 30;
+var $previewUpdateInterval = 3;
 
 // Preview box pixel width
-#var $previewWidth = 180;
+var $previewWidth = 720;
 
 // Max number of progress operations to keep in list
 var $maxProgressList = 5;
@@ -163,7 +156,7 @@ var $hostMemInfoRefreshInterval = 5;
 #var $disableTabVMConsole = true; // Console tab
 
 /* Screen resolutions for console tab */
-var $consoleResolutions = array('640x480','800x600','1024x768','1280x720','1440x900');
+var $consoleResolutions = array('640x480','800x600','1024x768','1280x720','1440x900', '1600x900', '1920x1080', '1920x1200', '2560x1440', );
 
 /* Console tab keyboard layout. Currently Oracle's RDP client only supports EN and DE. */
 var $consoleKeyboardLayout = 'EN';
@@ -219,17 +212,6 @@ LPT support may or may not work for you.
  */
 #var $eventListenerTimeout = 20;
 
-    public function __construct() {
-        // getting servers array
-        $this->servers = require __DIR__ . '/config-servers.php';
-        // getting override settings
-        $overrides = require __DIR__.'/config-override.php';
-        foreach ($overrides as $key => $value) {
-            $this->$key = $value;
-        }
-    }
-
-
-    /* END SETTINGS  */
+/* END SETTINGS  */
 
 }
