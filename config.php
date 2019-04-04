@@ -38,8 +38,7 @@ var $vrdeaddress = '0.0.0.0';
 var $servers = array(
         array(
                 'name' => 'Jenkins-Replica-1',
-                'location' => 'http://192.168.4.61:18083/',
-				'authMaster' => true // Use this server for authentication
+                'location' => 'http://192.168.4.61:18083/'
         ),
         array(
                 'name' => 'Jenkins-Replica-2',
@@ -60,7 +59,7 @@ var $noAuth = true;
 var $previewUpdateInterval = 3;
 
 // Preview box pixel width
-var $previewWidth = 720;
+var $previewWidth = 180;
 
 // Max number of progress operations to keep in list
 var $maxProgressList = 5;
@@ -157,7 +156,7 @@ var $enableGuestAdditionsVersionDisplay = true;
 #var $disableTabVMConsole = true; // Console tab
 
 /* Screen resolutions for console tab */
-var $consoleResolutions = array('640x480','800x600','1024x768','1280x720','1440x900','1600x900','1920x1080','1920x1200','2560x1440');
+var $consoleResolutions = array('640x480','800x600','1024x768','1280x720','1440x900');
 
 /* Console tab keyboard layout. Currently Oracle's RDP client only supports EN and DE. */
 var $consoleKeyboardLayout = 'EN';
