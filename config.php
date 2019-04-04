@@ -150,14 +150,14 @@ var $hostMemInfoRefreshInterval = 5;
 /*
  * Display guest additions version of a running VM on its Details tab
  */
-#var $enableGuestAdditionsVersionDisplay = true;
+var $enableGuestAdditionsVersionDisplay = true;
 
 /* Disable any of phpVirtualBox's main tabs */
 #var $disableTabVMSnapshots = true; // Snapshots tab
 #var $disableTabVMConsole = true; // Console tab
 
 /* Screen resolutions for console tab */
-var $consoleResolutions = array('640x480','800x600','1024x768','1280x720','1440x900', '1600x900', '1920x1080', '1920x1200', '2560x1440', );
+var $consoleResolutions = array('640x480','800x600','1024x768','1280x720','1440x900','1600x900','1920x1080','1920x1200','2560x1440');
 
 /* Console tab keyboard layout. Currently Oracle's RDP client only supports EN and DE. */
 var $consoleKeyboardLayout = 'EN';
