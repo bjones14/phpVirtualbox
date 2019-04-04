@@ -36,18 +36,22 @@ var $vrdeaddress = '0.0.0.0';
 // Add ALL the servers you want to use. Even if you have the server set
 // above. The default server will be the first one in the list.
 var $servers = array(
-        array(
-                'name' => 'Jenkins-Replica-1',
-                'location' => 'http://192.168.4.61:18083/'
-        ),
-        array(
-                'name' => 'Jenkins-Replica-2',
-                'location' => 'http://192.168.4.86:18083/'
-        ),
+	array(
+		'name' => 'Jenkins-Replica-1',
+		'username' => 'username',
+		'password' => 'password',
+		'location' => 'http://192.168.4.61:18083/'
+	),
+	array(
+		'name' => 'Jenkins-Replica-2',
+		'username' => 'username',
+		'password' => 'password',
+		'location' => 'http://192.168.4.86:18083/'
+	),
 );
 
 // Disable authentication
-var $noAuth = true;
+#var $noAuth = true;
 
 // Host / ip to use for console connections
 #var $consoleHost = '192.168.1.40';
@@ -56,10 +60,10 @@ var $noAuth = true;
 #var $noPreview = true;
 
 // Default preview box update interval in seconds
-var $previewUpdateInterval = 3;
+#var $previewUpdateInterval = 30;
 
 // Preview box pixel width
-var $previewWidth = 180;
+#var $previewWidth = 180;
 
 // Max number of progress operations to keep in list
 var $maxProgressList = 5;
